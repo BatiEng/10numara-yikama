@@ -129,7 +129,7 @@ export default function Testimonial() {
           <h2 className="text-4xl text-white font-semibold text-center text-yellow-500 mb-20">
             Google'da Bizi Nasıl Değerlendirdiler?
           </h2>
-          <Marquee direction="left" className="py-4" speed={30}>
+          <Marquee direction="left" className="py-4" speed={200}>
             {reviews.map((review) => (
               <ReviewCard
                 key={review.id}
