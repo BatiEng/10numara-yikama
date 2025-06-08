@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 const Marquee = ({
   children,
   direction = "left",
-  speed = 50,
+  speed = 200,
   pauseOnHover = true,
   className = "",
 }) => {
@@ -14,13 +14,14 @@ const Marquee = ({
 
   useEffect(() => {
     if (contentRef.current) {
+      console.log(contentRef.current.scrollWidth);
       setContentWidth(contentRef.current.scrollWidth);
     }
   }, [children]);
 
   return (
     <div
-      className={`overflow-hidden relative ${className}`}
+      className={`overflow-hidden relative w-1000 ${className}`}
       onMouseEnter={() => pauseOnHover && setIsPaused(true)}
       onMouseLeave={() => pauseOnHover && setIsPaused(false)}
     >
@@ -59,7 +60,7 @@ const Marquee = ({
 };
 
 const ReviewCard = ({ avatar, name, rating, review }) => (
-  <div className="w-80 p-4 bg-card rounded-lg border border-border shadow-sm">
+  <div className="w-full max-w-[80vw] sm:w-80 p-4 bg-card rounded-lg border border-border shadow-sm">
     <div className="flex items-center gap-3 mb-3">
       <img
         src={avatar}
@@ -114,17 +115,57 @@ export default function Testimonial() {
     },
     {
       id: 4,
-      name: "Mustafa Aykurt",
+      name: "Efe Gezer",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
       rating: 4,
       review:
-        "Yol üzerinde Tesadüfün girdiğim bir esnaf kardeşim güler yüzü,samimiyeti,esnaflığı ile aldığı parayı hak eden bir kardeşim. Hizmeti konusunda gözünüz arkada kalmasın.",
+        "Isprtada gerçekten güvenilir ve işinin hakkını veren bi işletme gözünüz kapalı aracınızın eksiklerini yaptırabilirsiniz",
+    },
+    {
+      id: 5,
+      name: "Bedrettin Demir",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Erkan kardeşim kötü durumda olan arabamızla bizzat ilgilendi. Söylememize rağmen detaylı girmiş işe. Ücret de uygundu hizmet adı gibi 10 numara. Teşekkürler tüm çalışanlara.",
+    },
+    {
+      id: 6,
+      name: "İsmail Kurdoğanlı",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Aracıma yapılan seramik uygulaması sonucunda satmak istediğim arabama binmeye devam ediyorum özenli işçilikleri ve güler yüzlü hizmetleri için erkan ve oğuzhan beye teşekkür ediyorum 👍",
+    },
+    {
+      id: 7,
+      name: "Hüseyin Gül",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Seramik kaplama konusunda işinde çok iyi bir işletme işçilik ilgi alaka 10 numara tüm ekibe teşekkürler",
+    },
+    {
+      id: 8,
+      name: "MELİKE ÖZDAMAR",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Özenli yıkamanın Isparta'da ki adresi i, zorlu her kirlenmede aracımızı güvenle emanet ediyoruz☺️",
+    },
+    {
+      id: 9,
+      name: "Altunay Bayındır",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      rating: 4,
+      review:
+        "Aracıma yıkama yaptırdım bu zamana kadar aracımın temiz bir şekilde yıkanmadığını anladım",
     },
   ];
 
   return (
     <div className=" bg-black p-8 flex flex-col gap-8 items-center justify-center">
-      <div className="w-full max-w-5xl space-y-8">
+      <div className="w-full max-w-9xl space-y-8">
         <div className="space-y-2">
           <h2 className="text-4xl text-white font-semibold text-center text-yellow-500 mb-20">
             Google'da Bizi Nasıl Değerlendirdiler?
