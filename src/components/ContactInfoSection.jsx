@@ -32,8 +32,8 @@ const ContactInfoSection = () => {
           <h3 className="text-lg font-semibold text-yellow-500 mb-2">
             Çalışma saatlerimiz
           </h3>
-          <p className="text-white">Monday – Friday: 8 am - 6 pm</p>
-          <p className="text-white">Saturday: 8 am - 3 pm</p>
+          <p className="text-white">Pazartesi – Cuma: 8.00 - 21.00</p>
+          <p className="text-white">Cumartesi - Pazar: 10.00 - 18.00</p>
         </div>
       </div>
     </div>
