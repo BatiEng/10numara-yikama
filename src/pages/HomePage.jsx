@@ -48,11 +48,11 @@ function HomePage() {
       <div id="hizmetlerimiz" className="mt-10">
         <FeaturesSection />
       </div>
+      <Testimonial />
 
       <div id="iletisim" className="flex items-center justify-center bg-black">
         <ContactInfoSection />
       </div>
-      <Testimonial />
     </>
   );
 }

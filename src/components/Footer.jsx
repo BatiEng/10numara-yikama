@@ -57,7 +57,11 @@ const Footer = () => {
               <a href="#" className="hover:text-yellow-400">
                 Facebook
               </a>
-              <a href="#" className="hover:text-yellow-400">
+              <a
+                href="https://wa.me/905078986888"
+                target="_blank"
+                className="hover:text-yellow-400"
+              >
                 WhatsApp
               </a>
             </div>
