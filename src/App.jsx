@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+
 import Footer from "./components/Footer";
-import Testimonial from "./components/Testimonial";
+import HomePage from "./pages/Homepage";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
       <Footer />
       {/* Instagram Button */}

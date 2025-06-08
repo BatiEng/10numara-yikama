@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import ServicesSection from "../components/ServicesSection";
 import Testimonial from "../components/Testimonial";
 import FeaturesSection from "../components/FeaturesSection";
 import ContactInfoSection from "../components/ContactInfoSection";
 
-function Homepage() {
+function HomePage() {
   return (
     <>
       <div className="hero relative">
@@ -58,4 +57,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default HomePage;
