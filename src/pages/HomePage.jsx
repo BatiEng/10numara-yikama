@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Testimonial from "../components/Testimonial";
 import FeaturesSection from "../components/FeaturesSection";
 import ContactInfoSection from "../components/ContactInfoSection";
+import ReviewsSection from "../components/ReviewsSection";
 
 function HomePage() {
   return (
@@ -48,7 +49,8 @@ function HomePage() {
       <div id="hizmetlerimiz" className="mt-10">
         <FeaturesSection />
       </div>
-      <Testimonial />
+      {/* <Testimonial /> */}
+      <ReviewsSection />
 
       <div id="iletisim" className="flex items-center justify-center bg-black">
         <ContactInfoSection />

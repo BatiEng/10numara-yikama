@@ -1,63 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 
-const Marquee = ({
-  children,
-  direction = "left",
-  speed = 200,
-  pauseOnHover = true,
-  className = "",
-}) => {
-  const [contentWidth, setContentWidth] = useState(1296);
-  const contentRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
-
-  //   useEffect(() => {
-  //     if (contentRef.current) {
-  //       setContentWidth(contentRef.current.scrollWidth);
-  //     }
-  //   }, [children]);
-
-  return (
-    <div
-      className={` relative w-10000 overflow-hidden ${className}`}
-      onMouseEnter={() => pauseOnHover && setIsPaused(true)}
-      onMouseLeave={() => pauseOnHover && setIsPaused(false)}
-    >
-      <div
-        className={`flex min-w-full gap-4`}
-        style={{
-          transform: `translateX(${direction === "left" ? "-" : ""}${
-            isPaused ? contentWidth / 4 : 0
-          }px)`,
-          animation: `scroll-${direction} ${
-            contentWidth / speed
-          }s linear infinite`,
-          animationPlayState: isPaused ? "paused" : "running",
-        }}
-      >
-        <div ref={contentRef} className="flex gap-4 shrink-0">
-          {children}
-        </div>
-        <div className="flex gap-4 shrink-0">{children}</div>
-      </div>
-
-      <style>
-        {`
-          @keyframes scroll-left {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
-          @keyframes scroll-right {
-            from { transform: translateX(-50%); }
-            to { transform: translateX(0); }
-          }
-        `}
-      </style>
-    </div>
-  );
-};
-
 const ReviewCard = ({ avatar, name, rating, review }) => (
   <div className="w-full max-w-[80vw] sm:w-80 p-4 bg-card rounded-lg border border-border shadow-sm">
     <div className="flex items-center gap-3 mb-3">
@@ -69,7 +12,7 @@ const ReviewCard = ({ avatar, name, rating, review }) => (
       <div>
         <h3 className="font-medium text-white">{name}</h3>
         <div className="flex gap-0.5">
-          {Array.from({ length: 100 }).map((_, i) => (
+          {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
               className={`w-4 h-4 ${
@@ -86,7 +29,7 @@ const ReviewCard = ({ avatar, name, rating, review }) => (
   </div>
 );
 
-export default function Testimonial() {
+const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
@@ -161,27 +104,49 @@ export default function Testimonial() {
         "Aracıma yıkama yaptırdım bu zamana kadar aracımın temiz bir şekilde yıkanmadığını anladım",
     },
   ];
+  const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % reviews.length);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [reviews.length]);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const cardWidth = containerRef.current.firstChild?.offsetWidth || 0;
+      containerRef.current.scrollTo({
+        left: cardWidth * currentIndex,
+        behavior: "smooth",
+      });
+    }
+  }, [currentIndex]);
 
   return (
-    <div className=" bg-black p-8 flex flex-col gap-8 items-center justify-center">
-      <div className="w-full max-w-9xl space-y-8">
-        <div className="space-y-2">
-          <h2 className="text-4xl text-white font-semibold text-center text-yellow-500 mb-20">
-            Google'da Bizi Nasıl Değerlendirdiler?
-          </h2>
-          <Marquee direction="left" className="py-4" speed={20}>
-            {reviews.map((review) => (
-              <ReviewCard
-                key={review.id}
-                avatar={review.avatar}
-                name={review.name}
-                rating={review.rating}
-                review={review.review}
-              />
-            ))}
-          </Marquee>
-        </div>
+    <div className="w-full overflow-hidden">
+      <h2 className="text-4xl text-white font-semibold text-center text-yellow-500 mb-20">
+        Google'da Bizi Nasıl Değerlendirdiler?
+      </h2>
+      <div
+        ref={containerRef}
+        className="flex flex-row gap-4 p-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth"
+      >
+        {reviews.map((review) => (
+          <div key={review.id} className="flex-shrink-0">
+            <ReviewCard
+              avatar={review.avatar}
+              name={review.name}
+              rating={review.rating}
+              review={review.review}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default ReviewsSection;
