@@ -97,24 +97,28 @@ const Navbar = () => {
           </button>
 
           <a
+            onClick={() => setIsOpen(false)}
             href="/"
             className="text-white text-xl font-medium hover:text-yellow-400 transition"
           >
             Anasayfa
           </a>
           <a
+            onClick={() => setIsOpen(false)}
             href="#hizmetlerimiz"
             className="text-white text-xl font-medium hover:text-yellow-400 transition"
           >
             Hizmetlerimiz
           </a>
           <a
+            onClick={() => setIsOpen(false)}
             href="#iletisim"
             className="text-white text-xl font-medium hover:text-yellow-400 transition"
           >
             Ulaşım
           </a>
           <a
+            onClick={() => setIsOpen(false)}
             href="#iletisim"
             className="bg-yellow-500 text-blue-900 px-5 py-2 rounded-md text-lg font-semibold hover:bg-yellow-400 transition"
           >
