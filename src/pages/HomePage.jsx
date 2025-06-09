@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import Testimonial from "../components/Testimonial";
 import FeaturesSection from "../components/FeaturesSection";
 import ContactInfoSection from "../components/ContactInfoSection";
 import ReviewsSection from "../components/ReviewsSection";
@@ -10,10 +9,8 @@ function HomePage() {
     <>
       <div className="hero relative">
         <Navbar />
-        {/* Overlay (optional if you want black transparency) */}
         <div className="absolute inset-0  bg-opacity-50 z-0" />
 
-        {/* Hero Content */}
         <motion.div
           className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-4 sm:px-10"
           initial={{ opacity: 0, y: -50 }}

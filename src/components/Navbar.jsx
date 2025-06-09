@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,12 @@ const Navbar = () => {
               >
                 Ulaşım
               </a>
+              <Link
+                to="/resimler"
+                className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900 transition duration-300"
+              >
+                Resimler
+              </Link>
               <a
                 href="#iletisim"
                 className="px-4 py-2 rounded-md text-sm font-medium bg-yellow-500 text-blue-900 hover:bg-yellow-400 transition duration-300"
@@ -117,6 +124,13 @@ const Navbar = () => {
           >
             Ulaşım
           </a>
+          <Link
+            onClick={() => setIsOpen(false)}
+            to="/resimler"
+            className="text-white text-xl font-medium hover:text-yellow-400 transition"
+          >
+            Resimler
+          </Link>
           <a
             onClick={() => setIsOpen(false)}
             href="#iletisim"

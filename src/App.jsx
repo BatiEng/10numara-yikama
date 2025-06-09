@@ -2,15 +2,17 @@ import { Route, Routes } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+import Galery from "./pages/Galery";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/resimler" element={<Galery />} />
       </Routes>
       <Footer />
-      {/* Instagram Button */}
+
       <a
         href="https://www.instagram.com/10numara_car_detailing"
         target="_blank"
@@ -29,6 +31,24 @@ function App() {
         </svg>
         <span className="text-sm font-medium">
           Detaylı fotoğraflar için sayfamızı takip edin
+        </span>
+      </a>
+      <a
+        href="https://wa.me/905555555555" // replace with your actual WhatsApp number
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-20 right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 flex items-center gap-2 z-50"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20.52 3.48A11.85 11.85 0 0012 0C5.38 0 0 5.38 0 12a11.92 11.92 0 001.62 6l-1.06 3.87 3.96-1.04A11.87 11.87 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22a9.88 9.88 0 01-5.06-1.4l-.36-.22-2.35.62.62-2.3-.23-.38A9.88 9.88 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.34-7.66c-.3-.15-1.76-.87-2.03-.97s-.47-.15-.67.15-.77.97-.95 1.17-.35.22-.65.07a8.1 8.1 0 01-2.37-1.47 8.9 8.9 0 01-1.65-2.06c-.17-.3 0-.47.13-.62.13-.15.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37 0-.52s-.65-1.57-.9-2.15c-.24-.57-.48-.5-.67-.5h-.57c-.2 0-.5.07-.77.37s-1 1-1 2.45 1 2.84 1.13 3.04c.15.2 1.98 3.03 4.83 4.25.68.3 1.22.47 1.63.6.68.22 1.3.2 1.78.12.54-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42s-.27-.22-.57-.37z" />
+        </svg>
+        <span className="text-sm font-medium">
+          WhatsApp üzerinden iletişime geçin
         </span>
       </a>
     </>

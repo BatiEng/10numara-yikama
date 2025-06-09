@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const FeaturesSection = () => {
   const features = [
     {
@@ -124,7 +125,12 @@ const FeaturesSection = () => {
 
   return (
     <section className="bg-black">
-      <div className="max-w-screen-xl  mx-auto px-4 text-center text-gray-600 md:px-8 ">
+      <motion.div
+        className="max-w-screen-xl  mx-auto px-4 text-center text-gray-600 md:px-8 "
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="max-w-2xl mx-auto">
           <h3 className="text-yellow-500 text-4xl font-semibold sm:text-4xl">
             Hizmetlerimiz
@@ -145,7 +151,7 @@ const FeaturesSection = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
