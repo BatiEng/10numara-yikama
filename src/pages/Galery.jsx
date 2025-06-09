@@ -7,6 +7,20 @@ import yikama2 from "../assets/yikama2.jpg";
 import yikama3 from "../assets/yikama3.jpg";
 import yikama4 from "../assets/yikama4.jpg";
 import yikama5 from "../assets/yikama5.jpg";
+import yikama6 from "../assets/yikama6.jpeg";
+import yikama7 from "../assets/yikama7.jpeg";
+import yikama8 from "../assets/yikama8.jpeg";
+import yikama9 from "../assets/yikama9.jpeg";
+import yikama10 from "../assets/yikama10.jpeg";
+import yikama11 from "../assets/yikama11.jpeg";
+import yikama12 from "../assets/yikama12.jpeg";
+import yikama13 from "../assets/yikama13.jpeg";
+import yikama14 from "../assets/yikama14.jpeg";
+import yikama15 from "../assets/yikama15.jpeg";
+import yikama16 from "../assets/yikama16.jpeg";
+import yikama17 from "../assets/yikama17.jpeg";
+import jant1 from "../assets/pisjant.jpeg";
+import jant2 from "../assets/pisjant.jpeg";
 import deri from "../assets/deri-boyama.jpeg";
 
 const images = [
@@ -17,10 +31,31 @@ const images = [
   { id: 5, url: yikama3, category: "Oto Yıkama" },
   { id: 6, url: yikama4, category: "Oto Yıkama" },
   { id: 7, url: yikama5, category: "Oto Yıkama" },
+  { id: 7, url: yikama6, category: "Oto Yıkama" },
+  { id: 7, url: yikama7, category: "Oto Yıkama" },
+  { id: 7, url: yikama8, category: "Oto Yıkama" },
+  { id: 7, url: yikama9, category: "Oto Yıkama" },
+  { id: 7, url: yikama10, category: "Oto Yıkama" },
+  { id: 7, url: yikama11, category: "Oto Yıkama" },
+  { id: 7, url: yikama12, category: "Oto Yıkama" },
+  { id: 7, url: yikama13, category: "Oto Yıkama" },
+  { id: 7, url: yikama14, category: "Oto Yıkama" },
+  { id: 7, url: yikama15, category: "Oto Yıkama" },
+  { id: 7, url: yikama16, category: "Oto Yıkama" },
+  { id: 7, url: yikama17, category: "Oto Yıkama" },
+  { id: 7, url: yikama17, category: "Oto Yıkama" },
+  { id: 7, url: jant1, category: "Jant" },
+  { id: 7, url: jant2, category: "Jant" },
   { id: 8, url: deri, category: "Deri Boyama" },
 ];
 
-const categories = ["Tuş Yenileme", "Oto Yıkama", "Deri Boyama", "Tümü"];
+const categories = [
+  "Tuş Yenileme",
+  "Oto Yıkama",
+  "Deri Boyama",
+  "Jant",
+  "Tümü",
+];
 
 function Galery() {
   const [selectedCategory, setSelectedCategory] = useState("Tümü");
