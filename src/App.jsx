@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import Galery from "./pages/Galery";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
         href="https://wa.me/905555555555" // replace with your actual WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-20 right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 flex items-center gap-2 z-50"
+        className="fixed bottom-16  right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 flex items-center gap-2 z-50"
       >
         <svg
           className="w-6 h-6"
