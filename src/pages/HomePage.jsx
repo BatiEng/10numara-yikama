@@ -28,17 +28,19 @@ function HomePage() {
             </a>
           </div>
 
-          {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold max-w-3xl mx-auto">
-            Sıradan Yıkamanın Ötesinde: Premium Araç Bakımı
-          </h1>
+          <div className="mb-30 sm:mb-0">
+            {/* Heading */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold max-w-3xl mx-auto">
+              Sıradan Yıkamanın Ötesinde: Premium Araç Bakımı
+            </h1>
 
-          {/* Subtitle */}
-          <h3 className="text-sm sm:text-base md:text-lg mt-6 max-w-2xl mx-auto text-gray-200">
-            Sıradan bir yıkama ile yetinmeyin, aracınıza hak ettiği premium
-            bakımı sunun. Detaylı temizlik, koruma ve yenileme hizmetlerimizle
-            aracınızı yeni gibi hissedin.
-          </h3>
+            {/* Subtitle */}
+            <h3 className="text-sm sm:text-base md:text-lg mt-6 max-w-2xl mx-auto text-gray-200">
+              Sıradan bir yıkama ile yetinmeyin, aracınıza hak ettiği premium
+              bakımı sunun. Detaylı temizlik, koruma ve yenileme hizmetlerimizle
+              aracınızı yeni gibi hissedin.
+            </h3>
+          </div>
         </motion.div>
       </div>
 

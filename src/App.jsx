@@ -35,7 +35,7 @@ function App() {
         </span>
       </a>
       <a
-        href="https://wa.me/905555555555" // replace with your actual WhatsApp number
+        href="https://wa.me/905078986888" // replace with your actual WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-16  right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 flex items-center gap-2 z-50"

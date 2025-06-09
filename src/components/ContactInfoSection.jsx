@@ -13,7 +13,7 @@ const ContactInfoSection = () => {
             Bizimle iletişime geçin
           </h3>
           <p className="text-white">0 507 898 6888</p>
-          <p className="text-white">0 507 898 6888</p>
+          <p className="text-white">0 539 939 9975</p>
           <p className="text-white">softlinekaplama@hotmail.com</p>
         </div>
 
