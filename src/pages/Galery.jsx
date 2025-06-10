@@ -31,7 +31,7 @@ const images = [
   { id: 5, url: yikama3, category: "Oto Yıkama" },
   { id: 6, url: yikama4, category: "Oto Yıkama" },
   { id: 7, url: yikama5, category: "Oto Yıkama" },
-  { id: 7, url: yikama6, category: "Oto Yıkama" },
+  { id: 23, url: yikama6, category: "Oto Yıkama" },
   { id: 8, url: yikama7, category: "Oto Yıkama" },
   { id: 9, url: yikama8, category: "Oto Yıkama" },
   { id: 10, url: yikama9, category: "Oto Yıkama" },
