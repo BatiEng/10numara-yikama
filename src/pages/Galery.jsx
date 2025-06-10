@@ -20,7 +20,7 @@ import yikama15 from "../assets/yikama15.jpeg";
 import yikama16 from "../assets/yikama16.jpeg";
 import yikama17 from "../assets/yikama17.jpeg";
 import jant1 from "../assets/pisjant.jpeg";
-import jant2 from "../assets/pisjant.jpeg";
+import jant2 from "../assets/temizjant.jpeg";
 import deri from "../assets/deri-boyama.jpeg";
 
 const images = [
@@ -59,7 +59,7 @@ const categories = [
 
 function Galery() {
   const [selectedCategory, setSelectedCategory] = useState("Tümü");
-  const [activeImage, setActiveImage] = useState(null); // stores full-screen image
+  const [activeImage, setActiveImage] = useState(null);
 
   const filteredImages =
     selectedCategory === "Tümü"
