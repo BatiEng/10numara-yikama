@@ -43,7 +43,7 @@ const ReviewsSection = () => {
       id: 2,
       name: "Ali Batıkan Öcal",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael",
-      rating: 4,
+      rating: 5,
       review:
         "Güler yüz temiz hizmet kalitenin adresi. Detaylı temizlik + pasta cila yaptırdım çok memnun kaldım",
     },
@@ -59,7 +59,7 @@ const ReviewsSection = () => {
       id: 4,
       name: "Efe Gezer",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Isprtada gerçekten güvenilir ve işinin hakkını veren bi işletme gözünüz kapalı aracınızın eksiklerini yaptırabilirsiniz",
     },
@@ -67,7 +67,7 @@ const ReviewsSection = () => {
       id: 5,
       name: "Bedrettin Demir",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Erkan kardeşim kötü durumda olan arabamızla bizzat ilgilendi. Söylememize rağmen detaylı girmiş işe. Ücret de uygundu hizmet adı gibi 10 numara. Teşekkürler tüm çalışanlara.",
     },
@@ -75,7 +75,7 @@ const ReviewsSection = () => {
       id: 6,
       name: "İsmail Kurdoğanlı",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Aracıma yapılan seramik uygulaması sonucunda satmak istediğim arabama binmeye devam ediyorum özenli işçilikleri ve güler yüzlü hizmetleri için erkan ve oğuzhan beye teşekkür ediyorum 👍",
     },
@@ -83,7 +83,7 @@ const ReviewsSection = () => {
       id: 7,
       name: "Hüseyin Gül",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Seramik kaplama konusunda işinde çok iyi bir işletme işçilik ilgi alaka 10 numara tüm ekibe teşekkürler",
     },
@@ -91,7 +91,7 @@ const ReviewsSection = () => {
       id: 8,
       name: "MELİKE ÖZDAMAR",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Özenli yıkamanın Isparta'da ki adresi i, zorlu her kirlenmede aracımızı güvenle emanet ediyoruz☺️",
     },
@@ -99,7 +99,7 @@ const ReviewsSection = () => {
       id: 9,
       name: "Altunay Bayındır",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
-      rating: 4,
+      rating: 5,
       review:
         "Aracıma yıkama yaptırdım bu zamana kadar aracımın temiz bir şekilde yıkanmadığını anladım",
     },
